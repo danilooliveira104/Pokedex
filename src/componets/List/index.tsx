@@ -7,29 +7,26 @@ import { Container, Grid, Title } from './styles'
 
 export const List = () => {
   const [listDataPokemon, setListDataPokemon] = useState<IListDataPokemon>()
-  
-  function createListPokemon(url: string) {
-    api.get(url).then(response => setListDataPokemon(response.data))
-    window.scrollTo(0, 0)
-  }
+  const [url, setUrl] = useState('pokemon?limit=50')
 
   useEffect(() => {
-    createListPokemon('pokemon?limit=50')
-  }, [])
+    api.get(url).then(response => setListDataPokemon(response.data))
+    console.log(listDataPokemon)
+    window.scrollTo(0, 0)
+  }, [url])
 
   return (
     <Container>
       <Title>Pokedex</Title> 
       <Grid>
-      {console.log(listDataPokemon)}
         {
           listDataPokemon?.results.map((item) => (
             <Card name={item.name} />
           ))
         }
       </Grid>
-      <button onClick={()=> {createListPokemon(`${listDataPokemon?.next.replace('https://pokeapi.co/api/v2/', '')}`)}}>Proximo</button>
-      <button onClick={()=> {createListPokemon(`${listDataPokemon?.previous.replace('https://pokeapi.co/api/v2/', '')}`)}}>Anterior</button>
+      <button onClick={()=> {setUrl(`${listDataPokemon?.next.replace('https://pokeapi.co/api/v2/', '')}`)}}>Proximo</button>
+      <button onClick={()=> {setUrl(`${listDataPokemon?.previous.replace('https://pokeapi.co/api/v2/', '')}`)}}>Anterior</button>
     </Container>
   )
 }
