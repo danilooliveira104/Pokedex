@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --background: #F5F5F6;
     --text-dark: #303943;
-    --text-white: #FFFFFF
+    --text-white: #FFFFFF;
+    --button-dark: #AAB3C7;
   }
 
   * {
@@ -25,7 +26,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    width: 100vw;
     height: 95vh;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased; 

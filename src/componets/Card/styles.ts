@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import lightPokeball from '../../assets/light-pokeball.png'
 
-export const Container = styled.main`
-  width: 95%;
+export const Container = styled.article`
+  width: 45%;
   height: 8rem;
   background-color: ${props => props.color};
   border-radius: 1rem;
