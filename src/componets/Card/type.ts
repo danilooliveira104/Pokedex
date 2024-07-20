@@ -19,7 +19,7 @@ type ITypes = {
 
 type ISprites = {
   other: {
-    dream_world: {
+    ['official-artwork']: {
       front_default: string
     }
   }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import background_button from '../../assets/background-button.jpg'
 
 export const Container = styled.main`
   display: flex;
@@ -25,16 +26,20 @@ export const Title = styled.div`
 `
 
 export const Pagination = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
 
   button {
-    background-color: var(--button-dark);
+    width: 100px;
+    height: 40px;
     border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    color: var(--text-whitrer);
+    padding: 0.5rem;
+    border-radius: 50px;
+    color: var(--text-dark);
+    background-color: transparent;
+    font-weight: 600;
   }
 `

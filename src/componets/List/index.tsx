@@ -10,6 +10,8 @@ export const List = () => {
   const [url, setUrl] = useState('pokemon?limit=50')
   const baseUrl = 'https://pokeapi.co/api/v2/'
 
+  console.log('Lista de pokemons: ', listDataPokemon)
+
   useEffect(() => {
     api.get(url).then(response => setListDataPokemon(response.data))
     window.scrollTo(0, 0)
@@ -26,8 +28,8 @@ export const List = () => {
         }
       </Grid>
       <Pagination>
-        <button onClick={()=> {setUrl(`${listDataPokemon?.previous.replace(baseUrl, '')}`)}}>Anterior</button>
-        <button onClick={()=> {setUrl(`${listDataPokemon?.next.replace(baseUrl, '')}`)}}>Proximo</button>
+        <button onClick={()=> {setUrl(`${listDataPokemon?.previous.replace(baseUrl, '')}`)}}>⇠ Anterior</button>
+        <button onClick={()=> {setUrl(`${listDataPokemon?.next.replace(baseUrl, '')}`)}}>Proximo ⇢</button>
       </Pagination>
     </Container>
   )

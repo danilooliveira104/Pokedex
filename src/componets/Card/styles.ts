@@ -2,7 +2,7 @@ import styled from "styled-components";
 import lightPokeball from '../../assets/light-pokeball.png'
 
 export const Container = styled.article`
-  width: 45%;
+  width: 47%;
   height: 8rem;
   background-color: ${props => props.color};
   border-radius: 1rem;
@@ -22,7 +22,7 @@ export const Container = styled.article`
   background-clip: border-box;
 
   img {
-    height: 4rem;
+    height: 4.5rem;
   }
 `
 
