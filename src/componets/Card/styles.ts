@@ -22,7 +22,11 @@ export const Container = styled.article`
   background-clip: border-box;
 
   img {
-    height: 4.5rem;
+    height: 5.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 18%;
   }
 `
 

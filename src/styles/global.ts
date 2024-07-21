@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    overflow-x: hidden;
     @media (max-width: 1024px) {
       font-size: 93.75%; //15 px
     }

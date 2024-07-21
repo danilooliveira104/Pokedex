@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import background_button from '../../assets/background-button.jpg'
 
 export const Container = styled.main`
   display: flex;
   flex-direction: column;
   margin: 2rem 0px;
-  width: 100vw;
   align-items: center;
   justify-content: center;
 `
