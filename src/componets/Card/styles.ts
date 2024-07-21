@@ -8,7 +8,6 @@ export const Container = styled.article`
   border-radius: 1rem;
   margin: 0.1rem auto;
   padding: 1rem;
-  box-shadow: 0px 15px 10px 5px #E7E9EB;
 
   display: flex;
   flex-direction: row;
@@ -25,8 +24,25 @@ export const Container = styled.article`
     height: 5.5rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 850px) {
+    width: 30%;
+  }
+
+  @media (min-width: 1250px) {
     width: 18%;
+  }
+
+  &:hover {
+  cursor: pointer;
+    img {
+      height: 6.5rem;
+      transition: 0.25s;
+    }
+    @media (max-width: 850px) {
+      img {
+        height: 6.0rem;
+      }
+    }
   }
 `
 

@@ -12,7 +12,7 @@ export const Card = (props: ICard) => {
 
   useEffect(() => {
       api.get(`pokemon/${name}`).then(response => setListPokemonDetails(response.data))
-  })
+  }, [])
 
   return (
     <Container color={defineColor(listPokemonDetails?.types[0].type.name)}>

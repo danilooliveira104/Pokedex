@@ -12,7 +12,7 @@ export const Grid = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.7rem;
   max-width: 90vw;
 `
 
